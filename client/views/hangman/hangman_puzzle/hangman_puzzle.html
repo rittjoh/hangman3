@@ -1,0 +1,21 @@
+<template name="Puzzle">
+	<div class="container">
+
+
+      <div class="jumbotron center">
+        {{#each puzzle}}
+        	<h2>Total: {{total}} Wrong:{{wrong}}</h2>
+	        <h2 class="barcode">{{pzlphrase}}</h2>
+	        <p>
+	        	<h3>
+	        		Category: "{{desc}}"	
+	        	</h3>
+	        </p>
+ 		{{/each}}
+      </div>
+
+	</div>
+</template>
+
+
+	
