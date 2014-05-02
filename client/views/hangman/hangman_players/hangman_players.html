@@ -2,10 +2,34 @@
 	<div class="container">
 
 		<div class="Players">
-			{{#each Players}}
-				name: {{username}} score: {{score}}
-			{{/each}}
+			<table class="table table-condensed">
+				<tr>
+					<th>
+						Name
+					</th>
+					<th>
+						Score
+					</th>
+				</tr>
+				{{#each Players}}
+					{{> Player}}
+				{{/each}}
+			</table>
 		</div>
 
 	</div>
+</template>
+
+<template name="Player">
+
+	
+		<tr>
+			<td>
+				{{username}}
+			</td>
+			<td>
+				{{score}}
+			</td>
+		</tr>
+	
 </template>
