@@ -16,7 +16,7 @@ Template.Letters.events({
       var btn = '#' + this.alpha;
       var points = 0;
 
-      points = Meteor.call('GuessLetter', this.alpha, function (err, result) {
+      Meteor.call('GuessLetter', this.alpha, function (err, result) {
         if(err){
           console.log(err);
         }else{

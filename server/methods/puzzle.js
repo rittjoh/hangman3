@@ -12,7 +12,7 @@ Meteor.methods({
   */
   	GuessLetter: function (alpha) {
   	
-      var tmp = Puzzle.findOne({isCurrent: 1});
+      var tmp = Puzzle.findOne({iscurrent: 1});
 
       //set temp array for change to be updated back into mongo
       var letters = tmp.letters;
@@ -92,6 +92,12 @@ Meteor.methods({
       }       
 
       return true;
+   },
+
+   currentPuzzle: function () {
+      var result = {};
+      result.puzzle = Puzzle.findOne({iscurrent: 1});
+      return result;
    }
 
 });

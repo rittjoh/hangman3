@@ -43,3 +43,8 @@ Router.map(function () {
 	this.route('hangman.index', {path: '/'});
   
 });
+
+Router.map(function () {
+	this.route('hangman.players', {path: '/players'});
+  
+});
